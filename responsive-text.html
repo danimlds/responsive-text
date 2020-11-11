@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos responsivos com CSS</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    h1 {
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        padding: 10px;
+    }
+    .max {
+        background: #98c1d9;
+    }
+    /* ***** max: pega o maior valor entre os dois ***** */
+    .max h1 {
+        font-size: max(60px, 5vw);
+    }
+    /* ***** min: pega o menor valor entre os dois ***** */
+    .min h1 {
+        font-size: min(150px, 10vw);
+    }
+</style>
+<body>
+    <section class="max">
+        <h1>Texto responsivo!</h1>
+    </section>
+    <section class="min">
+        <h1>Isso está ficando excelente!</h1>
+    </section>  
+</body>
+</html>
